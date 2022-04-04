@@ -131,12 +131,18 @@ def loadTblSR():
     searchResults = pd.read_sql('SELECT * FROM tbl_searchresults', engine )
     return searchResults
 
+def loadTblJI():
+    engine = getEngine()
+    jobItems = pd.read_sql('SELECT * FROM tbl_jobitems', engine )
+    return jobItems
+
+def insertWordFreq(df,table_name):
+    engine = getEngine()
+    df.to_sql(table_name,engine,if_exists='replace',index=False)
+
+
 def loadTblWordFreq():
     pass
 
 def loadTblNumFound():
-    pass
-
-
-def insertWordFreq():
     pass
