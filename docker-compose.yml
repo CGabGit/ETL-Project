@@ -5,9 +5,15 @@ services:
   
   app :
     build: ./app/
-    #ports:
-    #  - "8050:8050"
     depends_on: 
       - db
+
+  dashboard:
+    build: ./dashboard/
+    depends_on: 
+      - db
+      - app 
+    ports:
+      - "8050:8050"
     
     
