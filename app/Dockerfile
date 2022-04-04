@@ -5,5 +5,6 @@ RUN pip --no-cache-dir install -r requirements.txt
 COPY dbConnection.py dbConnection.py
 COPY etlPrjMain.py etlPrjMain.py
 COPY fetchJobSearch.py fetchJobSearch.py
+COPY fetchJobItem.py fetchJobItem.py
 COPY scraper.py scraper.py
 CMD ["python", "-u", "etlPrjMain.py"]

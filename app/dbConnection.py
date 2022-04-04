@@ -6,6 +6,8 @@ are defined
 import psycopg2
 import time 
 from sqlalchemy import create_engine
+import sqlalchemy
+import pandas as pd
 
 # Database credentials
 db_name = 'stepstone'
@@ -44,7 +46,7 @@ def rowExists(job_id):
     connection = openDBConnection()
     cursor = connection.cursor()
     row_exists = f"""
-    SELECT EXISTS(SELECT 1 FROM tbl_searchresults WHERE job_id = '{job_id}' )
+    SELECT EXISTS(SELECT 1 FROM tbl_jobitems WHERE job_id = '{job_id}' )
     """
     cursor.execute(row_exists)
     duplicate_bool = cursor.fetchone()
@@ -62,7 +64,7 @@ def insertToTblSR(connection, jobList, tableName):
     cursor = connection.cursor()
 
     row_exists = f"""
-    SELECT EXISTS(SELECT 1 FROM tbl_searchresults WHERE job_id = '{job_id}' )
+    SELECT EXISTS(SELECT 1 FROM tbl_jobitems WHERE job_id = '{job_id}' )
     """
     cursor.execute(row_exists)
     duplicate_bool = cursor.fetchone()
@@ -88,17 +90,46 @@ def insertToTblNumResFnd(connection, resultsFound, tableName):
     cursor.execute(sql)
     connection.commit()
 
-def insertToTblJobItems():
-    pass
+def insertToTblJobitems(connection, jobItem, tableName):
+    job_id = jobItem[0]
+    title = jobItem[1].replace("'","")
+    company_name = jobItem[2].replace("'","")
+    location = jobItem[3].replace("'","")
+    contractType = jobItem[4].replace("'","")
+    workType = jobItem[5].replace("'","")
+    onlineDate = jobItem[6].replace("'","")
+    description_content = jobItem[7].replace("'","")
+    profile_content = jobItem[8].replace("'","")
+
+    cursor = connection.cursor()
+
+    row_exists = f"""
+    SELECT EXISTS(SELECT 1 FROM tbl_jobitems WHERE job_id = '{job_id}' )
+    """
+    cursor.execute(row_exists)
+    duplicate_bool = cursor.fetchone()
+    if duplicate_bool[0] == False:
+        sql = f"""
+        INSERT INTO {tableName}(job_id, title, companyname, location,contracttype,worktype,onlinedate,descriptiontext,profiletext)
+        values('{job_id}', '{title}', '{company_name}','{location}','{contractType}','{workType}','{onlineDate}','{description_content}','{profile_content}')
+        """
+        cursor.execute(sql)
+        connection.commit()
+
 
 def truncateData():
     pass
 
 def getEngine():
-    pass
+    # connection string: driver://username:password@server/database
+    db_string = f'postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}'
+    engine = sqlalchemy.create_engine(db_string)
+    return engine
 
-def loadTblSr():
-    pass
+def loadTblSR():
+    engine = getEngine()
+    searchResults = pd.read_sql('SELECT * FROM tbl_searchresults', engine )
+    return searchResults
 
 def loadTblWordFreq():
     pass

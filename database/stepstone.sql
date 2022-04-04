@@ -29,6 +29,22 @@ CREATE TABLE tbl_searchresults (
     date_scraped timestamp without time zone
 );
 
+--
+-- Name: tbl_jobitems; Type: TABLE; Schema: public
+--
+
+CREATE TABLE tbl_jobitems (
+    job_id integer,
+    title text,
+    companyname text,
+    location text,
+    contracttype text,
+    worktype text,
+    onlinedate timestamp without time zone,
+    descriptiontext text,
+    profiletext text
+);
+
 
 --
 -- Data for Name: tbl_searchresults; Type: TABLE DATA; Schema: public

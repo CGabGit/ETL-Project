@@ -10,7 +10,7 @@ from random import randrange
 
 def extractData():
     df_searchResults = dbConnection.loadTblSR()
-    #print(df_searchResults.head(n=10))
+    print(df_searchResults.head(n=10))
     for i, row in df_searchResults.iterrows():
         rel_url = row['job_link']
         job_id = row['job_id']
@@ -121,7 +121,7 @@ def extractData():
             print("\n")
             print(profile_content)
 
-            connection = dbConnection.OpenDBConnection()
+            connection = dbConnection.openDBConnection()
             jobitem = [job_id, title, company_name, location, contractType,workType ,onlineDate,description_content,profile_content]
             dbConnection.insertToTblJobitems(connection, jobitem, "tbl_jobitems")
             dbConnection.closeDBConnection(connection)
