@@ -14,7 +14,6 @@ def extractData():
     for i, row in df_searchResults.iterrows():
         rel_url = row['job_link']
         job_id = row['job_id']
-        # bis hier ok
         if dbConnection.rowExists(job_id) == False:
             url = f"https://www.stepstone.de{rel_url}"            
             #s = HTMLSession()
