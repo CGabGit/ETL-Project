@@ -9,4 +9,3 @@ dbConnection.waitForPostgresContainer()
 fetchJobSearch.extractData()
 #fetchJobItem.extractData()
 nlpModule.preprocessing()
-

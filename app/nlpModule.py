@@ -9,6 +9,7 @@ from nltk.tokenize import word_tokenize
 from nltk import ngrams, FreqDist
 from nltk.stem import SnowballStemmer
 from datetime import datetime
+import time
 
 
 def loadSpreadsheet(fileId):
@@ -82,6 +83,8 @@ def stemming(tokens):
     dbConnection.insertWordFreq(word_freq.head(40),'tbl_word_freq')
     dbConnection.insertWordFreq(bigrams.head(20),'tbl_bigrams')
     dbConnection.insertWordFreq(trigrams.head(20),'tbl_trigrams')
+    time.sleep(10)
+    dbConnection.setStatusFinished()
     return print("nplModule finished!")
 
 

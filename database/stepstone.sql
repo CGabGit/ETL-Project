@@ -9,6 +9,16 @@ BEGIN;
 SET client_encoding = 'UTF8';
 
 --
+-- Name: tbl_status ; Type: TABLE; Schema: public
+--
+
+CREATE TABLE tbl_status (
+    is_finnished int,
+    record_date text
+);
+
+
+--
 -- Name: tbl_numresultsfound; Type: TABLE; Schema: public
 --
 

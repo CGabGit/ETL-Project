@@ -30,6 +30,17 @@ def waitForPostgresContainer():
             print("wait for database system...")
             time.sleep(1)
 
+def setStatusFinished():
+    connection = openDBConnection()
+    cursor = connection.cursor()
+    sql = f"""
+    INSERT INTO tbl_status (is_finnished ) values ( 1 )
+    """
+    cursor.execute(sql)
+    connection.commit()
+    closeDBConnection(connection)
+    return print("Webscraping & NLP finished")
+
 def openDBConnection():
     connection = psycopg2.connect(
         host= db_host,
