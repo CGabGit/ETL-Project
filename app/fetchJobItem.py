@@ -128,7 +128,7 @@ def extractData():
 
             print("\n")
             print(f"job posting {job_id} saved to DB")
-            time.sleep(randrange(62,299))
+            time.sleep(randrange(62,191))
 
 
             
