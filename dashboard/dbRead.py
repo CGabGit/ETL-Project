@@ -1,3 +1,4 @@
+from numpy import integer
 import psycopg2
 import time 
 from sqlalchemy import create_engine
@@ -48,21 +49,47 @@ def getEngine():
 #             print("wait for webscraping to finish...")
 #             time.sleep(30)
 
-def waitForScraperApp():
-    row = 0
-    while row != 1:
+def waitForPostgresContainer():
+    while True:
         try:
-            connection = openDBConnection()
-            cursor = connection.cursor()
-            row = f"""
-            SELECT 1 FROM tbl_status
-            """
-            cursor.execute(row)
-            closeDBConnection(connection)
+            con = openDBConnection()
+            closeDBConnection(con)
             break
         except:
-            print("wait for webscraping to finish...")
-            time.sleep(5)
+            print("wait for database system...")
+            time.sleep(1)
+
+
+# def waitForScraperApp():
+#     row = 0
+#     while row != 1:
+#         connection = openDBConnection()
+#         cursor = connection.cursor()
+#         row = f"""
+#         SELECT 1 FROM tbl_status
+#         """
+#         cursor.execute(row)
+#         closeDBConnection(connection)
+#         print("wait for scraping and NLP to finish")
+#         time.sleep(1)
+#     return print("start dashboard")      
+
+# def waitForScraperApp():
+#     row = 0
+#     while row != 1:
+#         connection = openDBConnection()
+#         cursor = connection.cursor()
+#         status_table = f"""
+#         SELECT * FROM tbl_status LIMIT 1
+#         """
+#         cursor.execute(status_table)
+#         closeDBConnection(connection)
+#         row = status_table[0]["is_finnished"]
+#         print("wait for scraping and NLP to finish")
+#         time.sleep(2)
+#         if row == 1:
+#             break
+#     return print("start dashboard")  
 
 
 def loadTblNumResFound(table_name):

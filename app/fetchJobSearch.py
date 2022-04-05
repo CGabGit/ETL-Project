@@ -45,7 +45,7 @@ def extractData():
             soup = BeautifulSoup(r.content, 'html.parser')
             print(transform(soup))
 
-            time.sleep(randrange(62,127))
+            time.sleep(randrange(62,82))
 
 def transform(soup):
     connection = dbConnection.openDBConnection()

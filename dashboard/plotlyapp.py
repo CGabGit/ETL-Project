@@ -13,9 +13,11 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from dash import html
 import flask
+import time
 
 # data import
-dbRead.waitForScraperApp()
+dbRead.waitForPostgresContainer()
+#dbRead.waitForScraperApp()
 numberOpenJobAds = dbRead.loadTblNumResFound('tbl_numresultsfound')
 searchTerm = numberOpenJobAds['searchterm'].iloc[0] # get first value in column 'searchterm'
 wordFreq = dbRead.loadTblWordFreq('tbl_word_freq')
@@ -161,7 +163,9 @@ def func(n_clicks):
 
 # Startup webapp
 if __name__ == '__main__':
-    dbRead.waitForScraperApp()
+    dbRead.waitForPostgresContainer()
+    #dbRead.waitForScraperApp()
     import os
     debug = False if os.environ["DASH_DEBUG_MODE"] == "False" else True
     app.run_server(host="0.0.0.0", port=8050, debug=debug)
+
