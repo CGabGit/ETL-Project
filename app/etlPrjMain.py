@@ -7,5 +7,5 @@ import os
 
 dbConnection.waitForPostgresContainer()
 fetchJobSearch.extractData()
-#fetchJobItem.extractData()
+fetchJobItem.extractData()
 nlpModule.preprocessing()
