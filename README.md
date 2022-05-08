@@ -59,4 +59,6 @@ P.S. all docker-compose commands can only be executed in the root directory of t
 This application is a prototype and subject to continuous improvement. 
 
 A common issue is that the 'dashboard' container does not wait for the 'app' container to finish. Therefore some diagramms can remain empty.
-_Workaround: 
+Workaround: at the time the NLP analysis is done, stop the 'dashboard' service and start the 'dashboard' service again. 
+
+Please also see 'Issues' section of this repo. 
