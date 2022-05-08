@@ -11,7 +11,7 @@ This application searches for job postings by a given job title and performs a N
 ---
 As prerequisits docker-cli (docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
 
-
+P.S. all docker-compose commands can only be executed in the root directory of the project where 'docker-compose.yml' is located!
 
 |              |                                                                   |
 |--------------|-------------------------------------------------------------------|
