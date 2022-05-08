@@ -1,6 +1,6 @@
 # **Job scraping with Python and Docker**
 ---
-This application searches for job postings by a given job title and performs an NLP analysis to find the most commonly mentioned skills and qualifications in job listings. The results are saved to a postgres database and displayed in a dash plotly dashboard.
+This application searches for job postings by a given job title and performs a NLP analysis to find the most commonly mentioned skills and qualifications in job listings. The results are saved to a postgres database and displayed in a dash plotly dashboard.
 
 
 ## Structure of the project
