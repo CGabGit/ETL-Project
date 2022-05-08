@@ -9,6 +9,9 @@ This application searches for job postings by a given job title and performs an 
 ---
 ## How to start the application
 ---
+As prerequisits docker-cli (docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
+
+- todo: table of commands and description.
 
 ## Known issues
 ---
