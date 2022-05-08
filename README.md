@@ -15,10 +15,10 @@ As prerequisits docker-cli (docker-desktop on Windows) and docker-compose have t
 
 |              |                                                                   |
 |--------------|-------------------------------------------------------------------|
-| Description: |  **start-up with build process**                                      |
+| Description: |  start-up with build process                                      |
 | Command:     | docker-compose up --build                                         |
 |              |                                                                   |
-| Description: | **start-up in background**                                            |
+| Description: | start-up in background                                            |
 | Command:     | docker-compose up -d                                              |
 |              |                                                                   |
 | Description: |  shutdown                                                         |
