@@ -1,6 +1,6 @@
 # **Job scraping with Python and Docker**
 
-## _This application is a prototype of an app that uses webscraping to extract job listings and conducts an analysis to identify the most frequently mentioned skills and technologies. 
+####This application searches for job postings and performs an NLP analysis to find the most commonly mentioned skills and qualifications for a job title. 
 ---
 
 ## Structure of the project
