@@ -1,7 +1,6 @@
 --
--- PostgreSQL database dump of the "stepstone" database.
+-- PostgreSQL init-script to create the "stepstone" db.
 --
--- The sample data used in the stepstone database was scraped from Stepstone.de in 2022
 
 
 BEGIN;

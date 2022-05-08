@@ -1,4 +1,10 @@
 import requests
+"""
+This file contains the 'setCookieRequest' function to set the 
+required 'session cookie' for accessing a website.
+Function 'scrapeRequest' conducts a get request to a website in
+order to access html content.
+"""
 
 def setCookieRequest(url):
     resp = requests.get(url,

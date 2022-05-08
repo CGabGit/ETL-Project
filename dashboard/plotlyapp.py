@@ -14,6 +14,10 @@ from dash import dcc
 from dash import html
 import flask
 import time
+"""
+This file contains everything related to the 
+'dash plotly' dashboard.
+"""
 
 # data import
 dbRead.waitForPostgresContainer()

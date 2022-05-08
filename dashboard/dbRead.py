@@ -4,6 +4,10 @@ import time
 from sqlalchemy import create_engine
 import sqlalchemy
 import pandas as pd
+"""
+File contains database related CRUD functions especially for 
+the dash plotly dashboard.
+"""
 
 # Database credentials
 db_name = 'stepstone'

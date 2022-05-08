@@ -1,8 +1,8 @@
-'''
-fetchJobSearch.py' conducts a search on www.stepstone.de 
-for a given search-term and scrapes all url's of all  
-job-listing and saves it to Posgres
-'''
+"""
+fetchJobSearch.py conducts a search on 'stepstone' 
+for a given search-term and scrapes the url's of all  
+job-listing and saves slected attributes to the posgres DB
+"""
 
 import requests
 from bs4 import BeautifulSoup

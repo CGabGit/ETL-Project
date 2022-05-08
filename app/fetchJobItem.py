@@ -7,6 +7,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 #from requests_html import HTMLSession
 from random import randrange
+"""
+In 'fetchJobSearch.py' the search result is loaded into 
+a dataframe. Each URL is accessed and selected 
+attributes are scraped and saved to postgres.
+"""
 
 def extractData():
     df_searchResults = dbConnection.loadTblSR()

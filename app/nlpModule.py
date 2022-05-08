@@ -10,7 +10,12 @@ from nltk import ngrams, FreqDist
 from nltk.stem import SnowballStemmer
 from datetime import datetime
 import time
-
+"""
+In this file all functions related to NLP are defined.
+The functions conducts on a string input: tokenization,
+stopword removal, stemming, n-gram-specific stopwords removal,
+count word frequency of one-grams, bi-grams, tri-grams
+"""
 
 def loadSpreadsheet(fileId):
     googleSpreadsheet = f"https://docs.google.com/spreadsheets/d/{fileId}/export?format=csv"
