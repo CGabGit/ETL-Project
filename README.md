@@ -7,6 +7,15 @@ This application searches for job postings by a given job title and performs a N
 ---
 ![architecture](markupObj/architecture.png)
 ---
+## Main packages used
+---
+| **web scraping** | **HTML Parser** | **extract data** | **database driver** | **NLP**              | **dashboard**     |
+|------------------|-----------------|------------------|---------------------|----------------------|-------------------|
+| beautifulSoup 4  | html5lib        | regex            | psycopg2            | NLTK                 | dash              |
+| requests         | lxml            | json             | SQLAlchemy          | NLTK 'punkt package' | plotly.graph_objs |
+| requests-html    |                 | pandas           |                     |                      |                   |
+
+---
 ## How to start the application
 ---
 As prerequisits docker-cli (docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
@@ -27,7 +36,7 @@ P.S. all docker-compose commands can only be executed in the root directory of t
 | Description: |  display all running containers                                   |
 | Command:     | docker ps                                                         |
 |              |                                                                   |
-| Description: |  display running & suspended containers                           |
+| Description: |  display running & stopped containers                             |
 | Command:     | docker ps -a                                                      |
 |              |                                                                   |
 | Description: |  display all images                                               |
