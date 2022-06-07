@@ -80,16 +80,15 @@ The dashboard can be accessed on:
 
 ## Configuation and download of data
 ---
-The search term, maximum number search results used for the analysis, as well as the lists of stop word for onegrams, bigrams and trigrams can be accessed through the dashboard.\
-\ 
-In this version the stop word lists are integrated via google sheets.\
+The search term, maximum number search results used for the analysis, as well as the lists of stop word for onegrams, bigrams and trigrams can be accessed through the dashboard.\ 
+In this version the stop word lists are integrated via google sheets.
 
 ![default stopwords](markupObj/default_german_stopwords.png)\
 *Example 4:* Customizable german stop word sheet.
 
 ## Known issues
 ---
-This application is a prototype and subject to continuous improvement.\ 
+This application is a prototype and subject to continuous improvement.
 A common issue is that the 'dashboard' container does not wait for the 'app' container to finish. Therefore some diagramms can remain empty.
 Workaround: at the time the NLP analysis is done, stop the 'dashboard' service and start the 'dashboard' service again. 
 
