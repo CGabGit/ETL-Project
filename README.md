@@ -63,6 +63,16 @@ P.S. all docker-compose commands can only be executed in the root directory of t
 | Description: |  start the 'dashboard' service(container)                         |
 | Command:     | docker-compose start dashboard                                    |
 
+## Dashboard
+---
+The dashboard can be accessed on:
+*127.0.0.1:8050*
+
+
+![linechart](markupObj/linechart.png)
+*Chart 1:* Time series of job postings for job title 'Wirtschaftsinformatiker' 
+
+
 ## Known issues
 ---
 This application is a prototype and subject to continuous improvement. 
