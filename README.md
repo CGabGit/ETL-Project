@@ -69,26 +69,27 @@ The dashboard can be accessed on:
 *127.0.0.1:8050*
 
 
-![linechart](markupObj/linechart.png)
+![linechart](markupObj/linechart.png)\
 *Example 1:* Time series of job postings for job title 'Wirtschaftsinformatiker' 
 
-![onegrams_barchart](markupObj/barchart_onegrams.png)
+![onegrams_barchart](markupObj/barchart_onegrams.png)\
 *Example 2:* Onegrams found for job title 'Wirtschaftsinformatiker' 
 
-![bigrams_barchart](markupObj/bigrams_barchart.png)
+![bigrams_barchart](markupObj/bigrams_barchart.png)\
 *Example 3:* Bigrams found for job title 'Wirtschaftsinformatiker'
 
 ## Configuation and download of data
 ---
-The search term, maximum number search results used for the analysis, as well as the lists of stop word for onegrams, bigrams and trigrams can be accessed through the dashboard. 
-In this version the stop word lists are integrated via google sheets.
-![default stopwords](markupObj/default_german_stopwords.png)
+The search term, maximum number search results used for the analysis, as well as the lists of stop word for onegrams, bigrams and trigrams can be accessed through the dashboard.\
+\ 
+In this version the stop word lists are integrated via google sheets.\
+
+![default stopwords](markupObj/default_german_stopwords.png)\
 *Example 4:* Customizable german stop word sheet.
 
 ## Known issues
 ---
-This application is a prototype and subject to continuous improvement. 
-
+This application is a prototype and subject to continuous improvement.\ 
 A common issue is that the 'dashboard' container does not wait for the 'app' container to finish. Therefore some diagramms can remain empty.
 Workaround: at the time the NLP analysis is done, stop the 'dashboard' service and start the 'dashboard' service again. 
 
