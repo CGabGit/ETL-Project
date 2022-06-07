@@ -70,8 +70,20 @@ The dashboard can be accessed on:
 
 
 ![linechart](markupObj/linechart.png)
-*Chart 1:* Time series of job postings for job title 'Wirtschaftsinformatiker' 
+*Example 1:* Time series of job postings for job title 'Wirtschaftsinformatiker' 
 
+![onegrams_barchart](markupObj/barchart_onegrams.png)
+*Example 2:* Onegrams found for job title 'Wirtschaftsinformatiker' 
+
+![bigrams_barchart](markupObj/bigrams_barchart.png)
+*Example 3:* Bigrams found for job title 'Wirtschaftsinformatiker'
+
+## Configuation and download of data
+---
+The search term, maximum number search results used for the analysis, as well as the lists of stop word for onegrams, bigrams and trigrams can be accessed through the dashboard. 
+In this version the stop word lists are integrated via google sheets.
+![default stopwords](markupObj/default_german_stopwords.png)
+*Example 4:* Customizable german stop word sheet.
 
 ## Known issues
 ---
