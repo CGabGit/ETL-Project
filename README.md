@@ -18,9 +18,11 @@ This application searches for job postings by a given job title and performs a N
 ---
 ## How to start the application
 ---
-As prerequisits docker-cli (docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
+Prerequisits: docker-cli (docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
 
-P.S. all docker-compose commands can only be executed in the root directory of the project where 'docker-compose.yml' is located!
+Please notice:
+- All docker-compose commands can only be executed in the root directory of the project where 'docker-compose.yml' is located!
+- The performance of the web scraping module is configured to ensure a fair and responsible use of publicly available website resources.
 
 |              |                                                                   |
 |--------------|-------------------------------------------------------------------|
@@ -70,25 +72,25 @@ The dashboard can be accessed on:
 
 
 ![linechart](markupObj/linechart.png)\
-*Example 1:* Time series of job postings for job title 'Wirtschaftsinformatiker' 
+*Example 1:* Time series with count of job postings for job title 'Wirtschaftsinformatiker' 
 
 ![onegrams_barchart](markupObj/barchart_onegrams.png)\
-*Example 2:* Onegrams found for job title 'Wirtschaftsinformatiker' 
+*Example 2:* unigrams found for job title 'Wirtschaftsinformatiker' 
 
 ![bigrams_barchart](markupObj/bigrams_barchart.png)\
 *Example 3:* Bigrams found for job title 'Wirtschaftsinformatiker'
 
 ## Configuation and download of data
 ---
-The search term, maximum number search results used for the analysis, as well as the lists of stop word for onegrams, bigrams and trigrams can be accessed through the dashboard.\ 
+The search term itself, the maximum number of search results used for the analysis, raw data of db-tables as well as the lists of stop words for unigrams, bigrams and trigrams can be accessed through the dashboard.\ 
 In this version the stop word lists are integrated via google sheets.
 
 ![default stopwords](markupObj/default_german_stopwords.png)\
-*Example 4:* Customizable german stop word sheet.
+*Example 4:* Customizable german stopword sheet.
 
 ## Known issues
 ---
-This application is a prototype and subject to continuous improvement.
+This application is a prototype and subject to continuous improvements.
 A common issue is that the 'dashboard' container does not wait for the 'app' container to finish. Therefore some diagramms can remain empty.
 Workaround: at the time the NLP analysis is done, stop the 'dashboard' service and start the 'dashboard' service again. 
 
