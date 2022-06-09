@@ -44,7 +44,7 @@ Please notice:
 | Description: |  display all images                                               |
 | Command:     | docker images                                                     |
 |              |                                                                   |
-| Description: |  log-on to docker-compose container with service name 'db'        |
+| Description: |  log on to docker-compose container with service name 'db'        |
 | Command:     | docker-compose exec db sh                                         |
 |              |                                                                   |
 | Description: |  switch to root-user                                              |
