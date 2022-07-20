@@ -18,12 +18,13 @@ This application searches for *job postings* by a given *job title* and performs
 ---
 ## How to start the application
 ---
-Prerequisits: docker-cli (docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
+Prerequisits: docker-cli (see docker-desktop on Windows) and docker-compose have to be installed. See also https://www.docker.com for further instructions.
 
 Please notice:
 - In contrast to *docker*, all *docker-compose* commands can only be executed in the root directory of the project where *'docker-compose.yml'* is located.
 - The performance of the web scraping module is configured to ensure a stable webscraping in order to avoid IP blacklisting.
 
+### Usefull Docker & Docker-Compose Commands
 
 start docker-compose with build process
 ```bash
