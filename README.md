@@ -50,11 +50,11 @@ display all images
 docker images
 ```
 ### restart a specific docker-compose container (service)
-stop the 'dashboard' service(container)
+stop the 'dashboard' service
 ```bash
 docker-compose stop dashboard
 ```
-start the 'dashboard' service(container)
+start the 'dashboard' service
 ```bash
 docker-compose start dashboard
 ```
